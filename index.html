@@ -1,0 +1,22 @@
+
+<body>
+    <!-- html -->
+    <div id="counter">
+        Counter: {{ counter }}
+    </div>
+
+    <!-- js -->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const Counter = {
+            data() {
+                return {
+                    counter: 0
+                }
+            }
+        }
+        Vue.createApp(Counter).mount('#counter')
+    </script>
+
+</body>
