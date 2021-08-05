@@ -5,6 +5,13 @@
         Counter: {{ counter }}
     </div>
 
+    <div id="bind-attribute">
+        <span v-bind:title="message">
+            Hover your mouse over me for a few seconds to see my dynamically bound
+            title!
+        </span>
+    </div>
+
     <!-- js -->
     <!-- development version, includes helpful console warnings -->
     <script src="https://unpkg.com/vue@next"></script>
@@ -14,9 +21,24 @@
                 return {
                     counter: 0
                 }
+            },
+        mounted() {
+            setInterval(() => {
+                this.counter++
+                }, 1000)
             }
         }
         Vue.createApp(Counter).mount('#counter')
+    </script>
+    <script>
+        const AttributeBinding = {
+            data() {
+                return {
+                message: 'You loaded this page on ' + new Date().toLocaleString()
+                }
+            }
+        }
+        Vue.createApp(AttributeBinding).mount('#bind-attribute')
     </script>
 
 </body>
