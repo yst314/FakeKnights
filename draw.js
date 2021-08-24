@@ -40,3 +40,4 @@ canvas.addEventListener("mouseout", function (e) {
 });
 
 ball.draw()
+

@@ -160,7 +160,6 @@ function ragnarok(def, res) {
         }
     }
     damage.convertMagicDamage(1)
-    
 
     // Gouka"劫火" penetrates 20(+2) resists.
     damage.magic = Math.floor(damage.magic * (100 - Math.max(0, res - 22)) / 100);
